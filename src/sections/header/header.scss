@@ -1,0 +1,141 @@
+header {
+  margin-top: 5rem;
+  height: calc(100vh - 5rem);
+  display: grid;
+  place-items: center;
+  background: linear-gradient(45deg, rgb(47, 55, 125), transparent);
+  transition: var(--transition);
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; 
+}
+
+.header__profile {
+  width: 14rem;
+  height: 11rem;
+  max-width: 60%;
+  max-height: 35vh;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header__profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header__profile:hover {
+  transform: translateY(-3px);
+}
+
+.header__text {
+  flex: 1; 
+  padding: 0 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header__container p {
+  text-align: center;
+  margin: 1rem 0 2rem;
+  font-size: 1.2rem;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.header__cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.header__cta_1 {
+  background-color: black !important;
+  color: var(--color-white);
+}
+
+.header__cta_1:hover {
+  transform: translateY(-0.5rem);
+  background-color: var(--color-white) !important;
+  color: var(--color-white) !important;
+  background: var(--color-black) !important;
+  border-color: var(--color-white) !important;
+}
+
+.header__cta_2:hover {
+  transform: translateY(-0.5rem);
+}
+
+.header__socials {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.header__socials a {
+  width: 2rem;
+  height: 2rem;
+  background: var(--color-light);
+  color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.header__socials a:hover {
+  background: var(--color-dark);
+  color: var(--color-white);
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    margin-top: 40px;
+    height: 100vh;
+  }
+  .header__content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__text {
+    text-align: center;
+    padding: 0; 
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header__profile {
+    max-width: 100%; 
+  }
+  .header__container p {
+    width: 100%;
+  }
+  .header__cta {
+    flex-direction: column;
+    gap: 0.5rem; 
+  }
+  .header__socials {
+    display: none;
+  }
+}
